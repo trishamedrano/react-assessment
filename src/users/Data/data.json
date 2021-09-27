@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "firstName": "Jenny",
+        "lastName": "Chan",
+        "email": "jenny.chan@email.com",
+        "eid": "1111",
+        "birthDate": "1995-05-29"
+    },
+    {
+        "id": 2,
+        "firstName": "Jessica",
+        "lastName": "Warren",
+        "email": "jessica.warren@email.com",
+        "eid": "2222",
+        "birthDate": "1999-09-15"
+    },
+    {
+        "id": 3,
+        "firstName": "Tony",
+        "lastName": "Frank",
+        "email": "tony.frank@email.com",
+        "eid": "3333",
+        "birthDate": "1987-01-16"
+    }
+]

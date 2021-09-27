@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Fleur+De+Leah&family=Grey+Qo&family=Italianno&family=Niconne&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: century gothic;
+}
+
+/* FORM */
+.main {
+    height: 550px;
+    background-color: #212529;
+    color: white;
+    position: relative;
+}
+
+.main h2 {
+    font-size: 90px;
+    font-family: "Grey Qo", cursive;
+    font-weight: bold;
+    color: rgb(240, 132, 150);
+}
+
+.main h1 {
+    font-size: 50px;
+    font-family: "Fjalla One", sans-serif;
+    letter-spacing: 5px;
+}
+
+.main .grid {
+    overflow: visible;
+    grid-template-columns: 55% auto;
+    gap: 30px;
+}
+
+.text {
+    animation: slideInFromLeft 1s ease-in;
+    margin-top: 10rem;
+}
+
+.main-form {
+    background-color: white;
+    position: relative;
+    top: 38px;
+    height: 400px;
+    z-index: 100;
+    justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
+}
+
+.main-form .form-control {
+    margin: 30px 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    background-color: #212529;
+}
+
+.card {
+    color: black;
+    padding-top: 0px;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    height: 35rem;
+    padding: 0px 3rem 3rem 3rem;
+}
+
+/* INPUT FORM */
+
+.main-controls {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main-control label {
+    display: block;
+    margin-bottom: 0.1rem;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.main-control input {
+    border-radius: 6px;
+    border: 1px solid rgb(145, 144, 144);
+    width: 20rem;
+    height: 2rem;
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.main::before,
+.main::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid,
+    .main .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .features-main .grid,
+    .docs-main .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main {
+        height: auto;
+    }
+
+    .text {
+        text-align: center;
+        margin-top: 40px;
+        animation: slideInFromTop 1s ease-in;
+    }
+
+    .main-form {
+        justify-self: center;
+        margin: auto;
+        animation: slideInFromBottom 1s ease-in;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-form {
+        width: 300px;
+    }
+}
+
+.form-actions {
+    text-align: center;
+}
+button {
+    font: inherit;
+    background-color: rgb(240, 132, 150);
+    color: white;
+    border: 1px solid rgb(240, 132, 150);
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 20rem;
+    max-width: 100%;
+}
+
+button:hover,
+button:active {
+    background-color: rgb(241, 94, 119);
+    border-color: rgb(241, 94, 119);
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+    background-color: rgb(240, 132, 150);
+    border-color: rgb(245, 203, 210);
+    cursor: not-allowed;
+}
+
+.error-text {
+    color: red;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.invalid input {
+    border: 1px solid #b40e0e;
+    background-color: #fddddd;
+    margin: 0px;
+    padding: 0px;
+}
+
